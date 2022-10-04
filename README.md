@@ -1,93 +1,52 @@
-# How-to-create-a-borderless-Xamarin.Forms-numeric-control-SfNumericTextBox-
+# How to create a borderless Xamarin.Forms numeric control SfNumericTextBox
 
-This article explains How to create a borderless Xamarin.Forms numeric control (SfNumericTextBox)
+This repository contains sample for how to create a borderless [Syncfusion Xamarin.Forms Numeric TextBox](https://help.syncfusion.com/xamarin/numeric-entry/getting-started) control.
 
-The SfNumericTextBox control is an advanced version of the Entry control that restricts input to numeric values.
+Please refer the KB through this [link](https://www.syncfusion.com/kb/11980/how-to-create-a-borderless-xamarin-forms-numeric-control-sfnumerictextbox).
 
-If you want to get Borderless_NumeircTextBox, you can disable the border using custom renderer and the output will be like this
+## Syncfusion controls:
 
- ![Output image of Borderless_NumeircTextBox](Borderless_NumeircTextBox.png)
- 
-## Creating the above UI
+This project used the following Syncfusion control(s):
+* [SfNumericTextBox](https://www.syncfusion.com/xamarin-ui-controls/xamarin-numeric-entry)
 
-You can achieve the above UI using the below code snippet
+## Supported platforms
 
-[C#]
+| Platforms | Supported versions |
+| --------- | ------------------ |
+| Android   | API level 21 and later versions |
+| iOS | iOS 9.0 and later versions |
+| UWP | Windows 10 devices |
 
-```
-public class CustomNumericTextBox: SfNumericTextBox
-{
+## Requirements to run the sample
 
-} 
-```
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
 
-[XAML]
+Refer to the following link for more details - [System Requirements](https://help.syncfusion.com/xamarin-ios/system-requirements)
 
-```
-<StackLayout>
+## How to run the sample
 
-<borderless_textbox:CustomNumericTextBox Value="123" HorizontalOptions="Center" VerticalOptions="Center" />
+1. Clone the sample and open it in Visual Studio.
 
-</StackLayout>
-```
+   *Note: If you download the sample using the "Download ZIP" option, right-click it, select Properties, and then select Unblock.*
+   
+2. Register your license key in the App.xaml.cs file as demonstrated in the following code.
 
-[CustomNumericTextBoxRenderer_Droid]
+		public App()
+		{
+			//Register Syncfusion license
+			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+	
+			InitializeComponent();
+	
+			MainPage = new App1.MainPage();
+		}
+		
+	Refer to this [link](https://help.syncfusion.com/xamarin/licensing/overview) for more details.
+	
+3. Clean and build the application.
 
-```
-    protected override void OnElementChanged(ElementChangedEventArgs<Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox> e)
-    {
-            base.OnElementChanged(e);
+4. Run the application.
 
-            if (Control != null)
-            {
-                Control.Background = null;
-            }
-        }
-    }
+## License
 
-``` 
-
-[CustomNumericTextBoxRenderer_iOS]
-
-```
-        protected override void OnElementChanged(ElementChangedEventArgs<SfNumericTextBox> e)
-        {
-            base.OnElementChanged(e);
-
-            if (Control != null)
-            {
-                Control.BorderStyle = UIKit.UITextBorderStyle.None;
-                Control.Layer.CornerRadius = 0f;
-                Control.Layer.BorderColor = Color.Transparent.ToCGColor();
-                Control.Layer.BorderWidth = 0;
-            }
-        }
-``` 
-
-[CustomNumericTextBoxRenderer_UWP]
-
-```
-        protected override void OnElementChanged(ElementChangedEventArgs<SfNumericTextBox> e)
-        {
-            base.OnElementChanged(e);
-
-            if (Control != null)
-            {
-                Control.BorderThickness = new Windows.UI.Xaml.Thickness(0);
-            }
-        }
-```    
-
-## See also
-
-[How to set the text color, Background color, watermark color, border color in Xamarin Numeric Entry (SfNumericTextBox)](https://help.syncfusion.com/xamarin/numeric-entry/colors)
-
-[How to set the maximum number of Decimal Digits in Xamarin Numeric Entry (SfNumericTextBox)](https://help.syncfusion.com/xamarin/numeric-entry/set-maximum-number-of-decimal-digits)
-
-[How to set the range support in Xamarin Numeric Entry (SfNumericTextBox)](https://help.syncfusion.com/xamarin/numeric-entry/range-support)
-
-[How to provide selection support in Xamarin Numeric Entry (SfNumericTextBox)](https://help.syncfusion.com/xamarin/numeric-entry/set-selectallonfocus)
-
-[How to provide Return Type in Xamarin Numeric Entry (SfNumericTextBox)](https://help.syncfusion.com/xamarin/numeric-entry/return-type)
-
-
+Syncfusion has no liability for any damage or consequence that may arise by using or viewing the samples. The samples are for demonstrative purposes, and if you choose to use or access the samples, you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, for accessing, or viewing the samples. By accessing, viewing, or seeing the samples, you acknowledge and agree Syncfusion’s samples will not allow you seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize, or otherwise do anything with Syncfusion’s samples.
