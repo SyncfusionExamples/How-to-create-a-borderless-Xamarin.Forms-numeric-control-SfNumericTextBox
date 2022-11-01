@@ -1,6 +1,6 @@
 # How to create a borderless Xamarin.Forms numeric control SfNumericTextBox
 
-This repository contains sample for how to create a borderless [Syncfusion Xamarin.Forms Numeric TextBox](https://help.syncfusion.com/xamarin/numeric-entry/getting-started) control.
+This repository contains sample to create a borderless [Syncfusion Xamarin.Forms Numeric TextBox](https://help.syncfusion.com/xamarin/numeric-entry/getting-started) control.
 
 Please refer the KB through this [link](https://www.syncfusion.com/kb/11980/how-to-create-a-borderless-xamarin-forms-numeric-control-sfnumerictextbox).
 
