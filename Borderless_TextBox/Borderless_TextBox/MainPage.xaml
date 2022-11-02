@@ -7,6 +7,10 @@
              xmlns:borderless_textbox="clr-namespace:Borderless_TextBox"
              x:Class="Borderless_TextBox.MainPage">
 
-      <borderless_textbox:CustomNumericTextBox Value="123" HorizontalOptions="Center" VerticalOptions="Center" />
+    <borderless_textbox:CustomNumericTextBox HeightRequest="50"
+                                             WidthRequest="100"
+                                             Value="123"
+                                             HorizontalOptions="Center"
+                                             VerticalOptions="Center" />
 
 </ContentPage>
